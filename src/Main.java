@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -23,10 +24,12 @@ public class Main {
     public static void main(String[] args) {
         controller = new Controller();
         list = new ArrayList<>();
-        //controller.randomList(list);
-        list.add(8);list.add(13);list.add(17);
-        list.add(19);list.add(21);list.add(23);list.add(23);
-        list.add(24);list.add(30);list.add(35);
+//        //controller.randomList(list);
+//        list.add(8);list.add(13);list.add(17);
+//        list.add(19);list.add(21);list.add(23);list.add(23);
+//        list.add(24);list.add(30);list.add(35);
+
+        list = Arrays.asList(1, 22, 5, 22, 1, 3, 6, 22);
 
 
         for(;;) {  //while(1)

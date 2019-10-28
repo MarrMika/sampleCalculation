@@ -49,13 +49,17 @@ public class Controller {
         double res1 = 0.0, res2 = 0.0;
         final Map<Integer, Long> map = list.stream()
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(map.entrySet());
 
-        for (Integer key : map.keySet()) {
-            res1 += Math.pow(key, 2) * map.get(key);
-            res2 = Math.pow(key - map.get(key), 2);
+        for (Map.Entry<Integer,Long> entry : map.entrySet()) {
+            res1 += Math.pow(entry.getKey(), 2) * entry.getValue();
+            res2 += entry.getKey() * entry.getValue();
         }
+        System.out.println(res1+" ");
+        System.out.println(res2+" ");
 
-        return res1 - res2;
+
+        return res1 - Math.pow(res2,2);
     }
 
     double getMean(List<Integer> list) {
