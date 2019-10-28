@@ -55,10 +55,7 @@ public class Controller {
             res1 += Math.pow(entry.getKey(), 2) * entry.getValue();
             res2 += entry.getKey() * entry.getValue();
         }
-        System.out.println(res1+" ");
-        System.out.println(res2+" ");
-
-
+        
         return res1 - Math.pow(res2,2);
     }
 
