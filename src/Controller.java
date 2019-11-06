@@ -77,8 +77,7 @@ public class Controller {
     }
 
     List<Integer> getSortedList(List<Integer> list) {
-        List<Integer> newList = list.subList(0, list.size());
-        return newList
+        return list
                 .stream()
                 .sorted((o1, o2) -> o1.compareTo(o2)).collect(Collectors.toList());
 
